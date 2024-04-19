@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>AlpOS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://sysyz-itcom.github.io/itcom/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="https://sysyz-itcom.github.io/itcom/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>暗线</h1>
+								<p>不要温和地走进那个良夜。</p>
+								<p></p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="https://sysyz-itcom.github.io/itcom/plot/spur/company.html">第一章</a></li>
+								<li><a href="#two">未知</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="one">
+							</article>
+
+						<!-- Work -->
+							<article id="two">
+                                <h2 class="major">？</h2>
+								<span class="image main"><img src="" alt="" /></span>
+								<p>编号：？   保管单位：？</p>
+                                <p>世界浩瀚，桥梁未连接……</p>
+							</article>
+
+						<!-- About -->
+							<article id="three">
+							</article>
+
+						<!-- Contact -->
+							<article id="four">
+							</article>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">AlpOS &copy; 2400-3492</p>
+						<p class="copyright">所有内容均为虚构，并非真实发生，请勿与现实结合。</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg">
+				<canvas id="mycanvas"></canvas>
+			</div>
+
+		<!-- Scripts -->
+			<script src="https://sysyz-itcom.github.io/itcom/assets/js/jquery.min.js"></script>
+			<script src="https://sysyz-itcom.github.io/itcom/assets/js/browser.min.js"></script>
+			<script src="https://sysyz-itcom.github.io/itcom/assets/js/breakpoints.min.js"></script>
+			<script src="https://sysyz-itcom.github.io/itcom/assets/js/util.js"></script>
+			<script src="https://sysyz-itcom.github.io/itcom/assets/js/main.js"></script>
+			<script>
+				function updateTime() {
+				const start = new Date('2024-02-08T00:00:00'); // 计时开始日期
+				const now = new Date(); // 当前日期
+				const diff = now - start; // 差值（毫秒）
+
+				// 计算天数、小时、分钟和秒
+				let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+				let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+				let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+				// 更新页面上的计时器
+				document.getElementById('timer').textContent =
+				`${days}天 ${hours}小时 ${minutes}分钟 ${seconds}秒`;
+				}
+
+				// 每秒更新时间
+				setInterval(updateTime, 1000);
+			</script>
+		        <script>
+				window.onload = function() {
+				var H = window.innerHeight;
+				var W = window.innerWidth;
+				var mycanvas = document.getElementById('mycanvas');
+				var ctx = mycanvas.getContext('2d');
+
+				// 设置画布尺寸
+				mycanvas.height = H;
+				mycanvas.width = W;
+				
+				var fontsize = 18;
+				var text = [];
+				var lie = Math.floor(W / fontsize);
+				var str = '01';
+				for (var i = 0; i < lie; i++) {
+				text.push(0);
+				}
+				ctx.font = fontsize + 'px 微雅软黑';
+
+				function draw() {
+				ctx.fillStyle = 'rgba(0,0,0,0.08)';
+				ctx.fillRect(0, 0, W, H);
+				ctx.fillStyle = randColor();
+				for (var i = 0; i < lie; i++) {
+				var index = Math.floor(Math.random() * str.length);
+				var x = Math.floor(fontsize * i);
+				var y = text[i] * fontsize;
+				ctx.fillText(str[index], x, y);
+				if (y > H && Math.random() > 0.99) {
+				text[i] = 0;
+				}
+				text[i]++;
+				}
+			}
+
+				function randColor() {
+				return 'rgb(127, 255, 0)';
+				}
+
+				var timer = setInterval(function() {
+			        draw();
+				}, 1000 / 30);
+			  };
+			</script>
+
+	</body>
+</html>

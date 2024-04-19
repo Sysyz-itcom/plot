@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>AlpOS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://sysyz-itcom.github.io/itcom/assets/css/main.css" />
+		<script src="https://allcolor.rth10.com/itcom/js/1.js" type="text/javascript"></script>
+		<noscript><link rel="stylesheet" href="https://sysyz-itcom.github.io/itcom/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>第一章：过去</h1>
+								<p>光芒已然消逝，但萤火依然闪耀，以史为镜，可以明得失。</p>
+								<p></p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#one">《源》</a></li>
+								<li><a href="#two">《云上避难所》</a></li>
+								<li><a href="#three">《避难所记录1》</a></li>
+                                                                <li><a href="#four">《避难所记录2》</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="one">
+                                <h2 class="major">《源》</h2>
+								<span class="image main"><img src="" alt="" /></span>
+								<p>编号：2400-01   保管单位：∝</p>
+                                <p>天地一色，冰天雪地，非一日消融，世界终焉？</p>
+							</article>
+
+						<!-- Work -->
+							<article id="two">
+                                <h2 class="major">《云上避难所》</h2>
+								<span class="image main"><img src="" alt="" /></span>
+								<p>编号：2400-02   保管单位：∝</p>
+                                <p>2450年，联合中央政府要求全球所有国家联合构建一个在地球卡门线上方的避难所，预计容纳15亿人，该计划在2460年完工。</p>
+							</article>
+
+						<!-- About -->
+							<article id="three">
+                                <h2 class="major">《避难所-记录1》</h2>
+								<span class="image main"><img src="" alt="" /></span>
+								<p>编号：2400-03   保管单位：∝</p>
+                                <p>Bot：电梯上行，玄窗关闭，请乘客尽快落座并系好安全带。</p><br>
+                                <p>“爸爸，我们要去哪里啊？”</p>
+                                <p>“乖，我们要去一个美丽的世界。”</p>
+                                <p>……</p>
+                                <p>Bot：已到达云上避难所，请您稍等，正在为您分配□□……</p>
+                                <p>“干什么？！” “呃……”</p>
+                                <p>Bot：□□□□成功接入，部分□□□□已删除，正在为机体分配空间……</p>
+                                <p>Bot：成功，欢迎来到云上避难所。</p>
+							</article>
+
+						<!-- Contact -->
+							<article id="four">
+                                <h2 class="major">《避难所-记录2》</h2>
+								<span class="image main"><img src="" alt="" /></span>
+								<p>编号：2400-04   保管单位：∝</p>
+                                <p>云上避难所由联合政府进行统一管理，若您的生活出现以下问题，请与最近的管理局联系：</p>
+                                <p>1. 您突然想起某些您并不清楚的事情，如高速电梯、悬浮城市等。</p>
+                                <p>2. 您的身体某些部位突然感到疼痛。</p>
+                                <p>3. 您并不熟悉您的家人。</p>
+                                <p>4. 身边有人对您说有关“云上避难所不存在”等谣言。（举报成功有奖）</p>
+                                <p>5. AlpOS并不存在，联合政府已就此事进行辟谣，如果您的身边有人继续传谣，请举报。（举报成功有奖）</p>
+                                <p>祝您生活愉快！</p>
+							</article>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">AlpOS &copy; 2400-3492</p>
+						<p class="copyright">所有内容均为虚构，并非真实发生，请勿与现实结合。</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg">
+				<canvas id="mycanvas"></canvas>
+			</div>
+
+		<!-- Scripts -->
+			<script src="https://sysyz-itcom.github.io/itcom/assets/js/jquery.min.js"></script>
+			<script src="https://sysyz-itcom.github.io/itcom/assets/js/browser.min.js"></script>
+			<script src="https://sysyz-itcom.github.io/itcom/assets/js/breakpoints.min.js"></script>
+			<script src="https://sysyz-itcom.github.io/itcom/assets/js/util.js"></script>
+			<script src="https://sysyz-itcom.github.io/itcom/assets/js/main.js"></script>
+			<script>
+				function updateTime() {
+				const start = new Date('2024-02-08T00:00:00'); // 计时开始日期
+				const now = new Date(); // 当前日期
+				const diff = now - start; // 差值（毫秒）
+
+				// 计算天数、小时、分钟和秒
+				let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+				let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+				let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+				// 更新页面上的计时器
+				document.getElementById('timer').textContent =
+				`${days}天 ${hours}小时 ${minutes}分钟 ${seconds}秒`;
+				}
+
+				// 每秒更新时间
+				setInterval(updateTime, 1000);
+			</script>
+		        <script>
+				window.onload = function() {
+				var H = window.innerHeight;
+				var W = window.innerWidth;
+				var mycanvas = document.getElementById('mycanvas');
+				var ctx = mycanvas.getContext('2d');
+			  };
+			</script>
+	</body>
+</html>

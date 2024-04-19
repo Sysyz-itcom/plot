@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>AlpOS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://sysyz-itcom.github.io/itcom/assets/css/main.css" />
+		<script src="https://allcolor.rth10.com/itcom/js/1.js" type="text/javascript"></script>
+		<noscript><link rel="stylesheet" href="https://sysyz-itcom.github.io/itcom/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>第二章：信息</h1>
+								<p>智慧永远是解开谜团的钥匙</p>
+								<p></p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#one">《时兴》</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="one">
+                                <h2 class="major">《时兴》</h2>
+								<span class="image main"><img src="" alt="" /></span>
+								<p>编号：01   保管单位：△</p>
+                                <p>鹫州山水秀，陆地城楼耸。叁时科技盛，四海航船动。</p>
+                                <p>破译：1C0B98E7B291A5763A4B05F7BAB9E4805936<br>C1E9157F28847087BD0800AE8904502EDE1036<br>AFB5FDBEC7486B0781C63C2116EF12174E3<br>FF02B3967BE</p>
+							</article>
+
+						<!-- Work -->
+							<article id="two">
+							</article>
+
+						<!-- About -->
+							<article id="three">
+							</article>
+
+						<!-- Contact -->
+							<article id="four">
+							</article>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">AlpOS &copy; 2400-3492</p>
+						<p class="copyright">所有内容均为虚构，并非真实发生，请勿与现实结合。</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg">
+				<canvas id="mycanvas"></canvas>
+			</div>
+
+		<!-- Scripts -->
+			<script src="https://sysyz-itcom.github.io/itcom/assets/js/jquery.min.js"></script>
+			<script src="https://sysyz-itcom.github.io/itcom/assets/js/browser.min.js"></script>
+			<script src="https://sysyz-itcom.github.io/itcom/assets/js/breakpoints.min.js"></script>
+			<script src="https://sysyz-itcom.github.io/itcom/assets/js/util.js"></script>
+			<script src="https://sysyz-itcom.github.io/itcom/assets/js/main.js"></script>
+			<script>
+				function updateTime() {
+				const start = new Date('2024-02-08T00:00:00'); // 计时开始日期
+				const now = new Date(); // 当前日期
+				const diff = now - start; // 差值（毫秒）
+
+				// 计算天数、小时、分钟和秒
+				let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+				let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+				let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+				// 更新页面上的计时器
+				document.getElementById('timer').textContent =
+				`${days}天 ${hours}小时 ${minutes}分钟 ${seconds}秒`;
+				}
+
+				// 每秒更新时间
+				setInterval(updateTime, 1000);
+			</script>
+		        <script>
+				window.onload = function() {
+				var H = window.innerHeight;
+				var W = window.innerWidth;
+				var mycanvas = document.getElementById('mycanvas');
+				var ctx = mycanvas.getContext('2d');
+			  };
+			</script>
+	</body>
+</html>
